@@ -4,13 +4,14 @@
 
         
         <div class="container mt-4">
+            @foreach ($posts as $post) 
             <div class="card mt-4">
                 <div class="card-header mb-2">
-                    Title
+                    {{ $post->title }}
                 </div>
                 <div class=card-body>
                     <p class="card-text">
-                        body
+                    {{ $post->body }}
                     </p>
                 </div>
                 <div class="card-footer">
@@ -18,8 +19,8 @@
                         投稿日時
                     </span>
                 </div>
-                
             </div>
+            @endforeach
         </div>
 
 @endsection('content')
